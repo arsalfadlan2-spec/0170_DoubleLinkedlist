@@ -192,3 +192,28 @@ if (current == START)
             cout << "Roll Number: " << current->noMhs << endl;
         }
     }
+
+    int main()
+{
+    DoubleLinkedList list;
+    char choice;
+    do
+    {
+        cout << "\nMenu:\n1. Add Record\n2. Delete Record\n3. View Ascending\n4. View Descending\n5. Search Record\n6. Exit\nEnter your choice: ";
+        cin >> choice;
+        switch (choice)
+        {
+            case '1': list.addNode(); break;
+            case '2': list.hapus(); break;
+            case '3': list.traverse(); break;
+            case '4': list.revtraverse(); break;
+            case '5': list.searchData(); break;
+            case '6': return 0;
+            default: cout << "Invalid option\n";
+        }
+        cout << "\nPress Enter to continue...";
+        cin.ignore(); cin.get();
+        system("clear"); 
+    } while (choice != '6');
+    return 0;
+}
